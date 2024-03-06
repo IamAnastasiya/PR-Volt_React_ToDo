@@ -15,21 +15,22 @@ const Todos: React.FC = () => {
   const handleFilter: (event: React.MouseEvent<HTMLSpanElement>) => void =
   (event) => {
     const text = event.currentTarget?.textContent?.toLowerCase()
-    setFilter(text || 'All')
+    setFilter(text || 'all')
   }
 
   let filteredTodos
 
-  if (filter === 'completed') {
+  if (filter.includes('completed')) {
     filteredTodos = todos.filter((todo) => todo.isCompleted)
-  } else if (filter === 'current') {
+  } else if (filter.includes('current')) {
     filteredTodos = todos.filter((todo) => !todo.isCompleted)
   } else {
     filteredTodos = todos
   }
 
   return <>
-    {todos.length > 0 && <TodosFilter handleFilter={handleFilter} />}
+    {todos.length > 0 &&
+    <TodosFilter handleFilter={handleFilter} filter={filter} />}
     <ul className={styles.todos}>
       {filteredTodos.map((todo: Todo) => <TodoItem
         key={todo.id}

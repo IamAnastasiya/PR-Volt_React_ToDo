@@ -12,4 +12,12 @@
   border-radius: 10px;
   font-weight: 700;
   font-size: 0.7rem;
+  cursor: pointer;
 }
+
+.filter button.selected {
+  background-color: #f1e1ab;
+}
+
+
+
