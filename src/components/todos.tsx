@@ -16,7 +16,6 @@ const Todos: React.FC = () => {
   (event) => {
     const text = event.currentTarget?.textContent?.toLowerCase()
     setFilter(text || 'All')
-    console.log(text)
   }
 
   let filteredTodos
