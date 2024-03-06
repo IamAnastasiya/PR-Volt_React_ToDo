@@ -1,0 +1,15 @@
+.filter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.filter button {
+  border: none;
+  background-color: #e3dece;
+  padding: 10px;
+  width: 7rem;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.7rem;
+}

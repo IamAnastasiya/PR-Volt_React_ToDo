@@ -1,0 +1,19 @@
+.item {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  background-color: #f7f5ef;
+}
+
+.item span {
+  cursor: pointer;
+  user-select: none;
+}
+
+.completed {
+  opacity: 0.6;
+  text-decoration-line: line-through;
+}
+
